@@ -1,11 +1,15 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+import { createGlobalStyle } from "styled-components";
+import "modern-normalize";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+const GlobalStyle = createGlobalStyle`
+:root {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24.38px;
+text-transform: uppercase;
+color: #ebd8ff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,14 +18,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -35,8 +39,12 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+p{
+  margin: 0;
+  padding: 0;
+}
 
-button {
+/* button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -53,7 +61,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -67,3 +75,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+`;
+export default GlobalStyle;
