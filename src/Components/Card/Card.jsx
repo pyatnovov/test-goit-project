@@ -1,8 +1,8 @@
 import GoitLogo from "../../svg/Logo.svg";
 import backgImage from "../../svg/Picture.svg";
-import Person from "../../svg/Hansel.svg";
-
+import { fetchUsers } from "../fetchAPI";
 import { Card } from "./Card.styled";
+
 import {
   Logo,
   BcgColor,
@@ -10,27 +10,29 @@ import {
   Avatar,
   PersonImg,
   CardInfo,
-  Button,
 } from "./Card.styled";
+import FollowButton from "../FollowBtn/FollowBtn";
 
+const users = await fetchUsers();
 const UserCard = () => {
-  return (
-    <section>
-      <Card>
+  return users.map((user) => {
+    const followers = user.followers.toLocaleString("en");
+    return (
+      <Card key={user.id}>
         <Logo src={GoitLogo} alt="logo" />
         <BcgColor src={backgImage} alt="bcg-image" />
         <Avatar>
-          <PersonImg src={Person} />
+          <PersonImg src={user.avatar} />
         </Avatar>
         <Line></Line>
 
         <CardInfo>
-          <p>777 tweets</p>
-          <p>100,500 followers</p>
+          <p>{user.tweets} tweets</p>
+          <p>{followers} followers</p>
         </CardInfo>
-        <Button type="button">Follow</Button>
+        <FollowButton />
       </Card>
-    </section>
-  );
+    );
+  });
 };
 export default UserCard;

@@ -4,7 +4,6 @@ export const Card = styled.div`
   position: relative;
   width: 380px;
   height: 460px;
-
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -33,7 +32,6 @@ export const Line = styled.p`
   width: 380px;
   height: 8px;
   top: 214px;
-
   background: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
@@ -69,22 +67,4 @@ export const CardInfo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
-`;
-
-export const Button = styled.button`
-  position: absolute;
-  bottom: 36px;
-  left: 92px;
-  right: 92px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  text-transform: uppercase;
-  width: 196px;
-  height: 50px;
-  background: #ebd8ff;
-  color: #373737;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10.3108px;
-  border: none;
 `;
