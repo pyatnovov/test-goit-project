@@ -16,3 +16,15 @@ export const Button = styled.button`
   border-radius: 10.3108px;
   border: none;
 `;
+
+export const GalleryCard = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+export const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+  justify-content: center;
+  margin: 20px 0 50px;
+`;

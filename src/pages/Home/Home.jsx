@@ -1,5 +1,6 @@
+import { Title } from "./Home.styled";
 const Home = () => {
-  return <h1>HomePage</h1>;
+  return <Title>It's Home Page</Title>;
 };
 
 export default Home;

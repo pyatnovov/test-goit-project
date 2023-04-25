@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import UserCard from "../../Components/Card/Card";
 import { fetchUsers } from "../../Components/fetchAPI";
 import { Link } from "react-router-dom";
-import { Button } from "./Tweets.styled";
+import { Button, GalleryCard, List } from "./Tweets.styled";
 
 const Tweets = () => {
   const PER_PAGE = 3;
@@ -35,11 +35,11 @@ const Tweets = () => {
 
   return (
     <>
-      <div>
+      <GalleryCard>
         <Link to="/">
           <Button>Go Back</Button>
         </Link>
-        <ul>
+        <List>
           {users.length > 0 &&
             users.map(({ id, user, avatar, followers, tweets, followed }) => (
               <UserCard
@@ -52,9 +52,10 @@ const Tweets = () => {
                 followed={followed}
               />
             ))}
+
           {shownBtn && <Button onClick={handleLoadMore}>Load more</Button>}
-        </ul>
-      </div>
+        </List>
+      </GalleryCard>
     </>
   );
 };
